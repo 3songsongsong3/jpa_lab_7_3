@@ -5,5 +5,7 @@
 <br>
  * 값 타입의 종류
    - 기본값 타입
-   - 임베디드 타입
+   - 임베디드 타입<br>
+     ![image](https://github.com/3songsongsong3/jpa_lab_7_3/assets/73326851/b5df6e69-5e21-41b2-8a24-cc938cc49f09)
+
    - 컬렉션 값 타입
