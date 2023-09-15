@@ -48,7 +48,11 @@ public class Member {
     private String zipcode;*/
 
     //////////////////// 변경 후 ////////////////////////
+    // @Embedded - 값 타입을 사용하는 곳에 표시
+
+    // startDate, endDate를 합해서 Period 클래스를 만들었다.
     @Embedded Period workPeriod;
+    // city, street, zipcode를 합해서 Address 클래스를 만들었다.
     @Embedded Address homeAddress;
 
 }
