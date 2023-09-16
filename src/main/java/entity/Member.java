@@ -54,5 +54,20 @@ public class Member {
     @Embedded Period workPeriod;
     // city, street, zipcode를 합해서 Address 클래스를 만들었다.
     @Embedded Address homeAddress;
+    // 임베디드 타입에 정의한 매핑정보를 재정의 (회원에게 주소가 하나 더 필요할 경우)
+    // 한 엔티티에 같은 임베디드 타입을 중복해서 사용하는 일은 많지 않다.
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "city", column = @Column(name
+                    = "COMPANY_CITY")),
+            @AttributeOverride(name = "street", column = @Column(name
+                    = "COMPANY_STREET")),
+            @AttributeOverride(name = "zipcode", column = @Column(name
+                    = "COMPAY_ZIPCODE"))
+    })
+    Address compayAddress;
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 }
